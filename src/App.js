@@ -1,23 +1,40 @@
 import './App.css';
-import Header from './components/Header';
+import User from './components/User';
 
-const name = 'Görkem';
-const surname = 'Durgun';
-const isLogged = false;
+const favSingers = [
+  {
+    name: "Güneş",
+    age: 22,
+  },
+  {
+    name: "Drake",
+    age: 37,
+  },
+  {
+    name: "Murda",
+    age: 32,
+  },
+];
 
 function App() {
   return (
+
     <div>
 
-      <h2>
-        {
-          isLogged 
-          ? `Adım ${name}, soyadım ${surname}` 
-          : 'Giriş Yapın'
-        }
-      </h2>
+      <User 
+      name="Görkem"
+      surname="Durgun"
+      isLogged={true}
+      age='24'
+      address={{
+        city: 'İzmir',
+        zipcode: 35110,
+      }}
+      favSingers={favSingers}
+      />
 
     </div>
+    
   );
 }
 
