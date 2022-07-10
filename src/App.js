@@ -1,5 +1,6 @@
 import './App.css';
-import InputState from './components/InputState';
+import Counter from './components/Counter';
+import { useState } from 'react';
 
 /*
 const favSingers = [
@@ -19,14 +20,23 @@ const favSingers = [
 */
 
 function App() {
+  const [visible, setVisible] = useState(true);
+
   return (
 
     <div>
 
-      <InputState/>
+      {visible && <Counter />}
+
+      <br />
+
+      <button
+        onClick={() => setVisible(!visible)}>
+        set visible
+      </button>
 
     </div>
-    
+
   );
 }
 
