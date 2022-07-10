@@ -1,6 +1,7 @@
 import './App.css';
-import User from './components/User';
+import InputState from './components/InputState';
 
+/*
 const favSingers = [
   {
     name: "Güneş",
@@ -15,23 +16,14 @@ const favSingers = [
     age: 32,
   },
 ];
+*/
 
 function App() {
   return (
 
     <div>
 
-      <User 
-      name="Görkem"
-      surname="Durgun"
-      isLogged={true}
-      age='24'
-      address={{
-        city: 'İzmir',
-        zipcode: 35110,
-      }}
-      favSingers={favSingers}
-      />
+      <InputState/>
 
     </div>
     
